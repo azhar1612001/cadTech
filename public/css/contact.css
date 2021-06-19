@@ -1,0 +1,19 @@
+.left {
+    background-color: #1d5160;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.left>div {
+    border: 1px solid #0dcaf073;
+    padding: 20px;
+}
+
+.right {
+    background-color: #664d03;
+    color: #fff;
+    padding: 20px;
+}
