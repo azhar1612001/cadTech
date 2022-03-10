@@ -13,12 +13,12 @@ font-family: 'PT Serif', serif; -> para
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dignity</title>
+    <title>Cad Technologies</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lobster&family=PT+Serif&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW50ZXJpb3IlMjBkZXNpZ25lcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/cad2.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         * {
@@ -27,25 +27,154 @@ font-family: 'PT Serif', serif; -> para
             box-sizing: border-box;
             font-family: 'PT Serif', serif;
         }
+
+        .logoImage{
+            width: 110px;
+        }
+        .dropdown-menu{
+            background-color: #318494;
+            border: none;
+        }
+        .dropdown-menu a{
+            color: #fff;
+        }
+        .dropdown-menu a:hover{
+            background: none;
+            color: #e0ba68;
+            border-bottom: 2px solid #e0ba68;
+        }
+        #item1,#item2,#item3,#item4{
+            position: relative;
+        }
+        #detailed1{
+            display: none;
+            list-style: none;
+        }
+        #detailed1 li{
+            line-height: 25px;
+        }
+        #item1:hover #detailed1{
+            display: block;
+            position: absolute;
+            right: -80%;
+            top: -5%;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed2{
+            display: none;
+            list-style: none;
+        }
+        #detailed2 li{
+            line-height: 25px;
+        }
+        #item2:hover #detailed2{
+            display: block;
+            position: absolute;
+            right: -70%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed3{
+            display: none;
+            list-style: none;
+        }
+        #detailed3 li{
+            line-height: 25px;
+        }
+        #item3:hover #detailed3{
+            display: block;
+            position: absolute;
+            right: -60%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed4{
+            display: none;
+            list-style: none;
+        }
+        #detailed4 li{
+            line-height: 25px;
+        }
+        #item4:hover #detailed4{
+            display: block;
+            position: absolute;
+            right: -60%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
         
-        .architec h1 {
+        .civil h1 {
             font-family: 'PT Serif', serif;
             color: #000;
         }
         
-        .architec p {
+        .desc {
             color: #374e4e;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+        }
+        .pricing{
             font-weight: bold;
             font-size: 20px;
             font-family: 'Inter', sans-serif;
         }
+        .real_price,.cut_price{
+            display: inline;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+        .real_price{
+            color: green;
+        }
+        .cut_price{
+            color: red;;
+        }
+        .query{
+            position: fixed;
+            top: 78%;
+            right: 0;
+        }
+        .firstq{
+            font-weight: bold;
+            font-size: 20px;
+            background: #055160;
+            color: #fff;
+            padding: 10px;
+        }
+        .secondq{
+            font-weight: bold;
+            font-size: 18px;
+            background: #ffd607;
+            color: #055160;
+            padding: 10px;
+        }
+        .sticky {
+            position: fixed;
+            top: 20%;
+        }
+
+        @media (max-width: 1300px){
+            .firstq,.secondq {
+                font-size: 15px;
+            }
+        }
         
         @media (max-width: 1000px) {
-            .architec-container {
+            .civil-container {
                 padding: 0;
-                margin: 0;
+                margin: 10px;
             }
-            .architec-row {
+            .civil-row {
                 width: 100vw;
             }
             .company-content p {
@@ -54,13 +183,17 @@ font-family: 'PT Serif', serif; -> para
         }
         
         @media (max-width: 800px) {
-            .architec-row {
+            .firstq,.secondq {
+                font-size: 10px;
+                padding: 5px;
+            }
+            .civil-row {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
-            .architec-row-even {
+            .civil-row-even {
                 flex-direction: column-reverse;
             }
             .company-img {
@@ -88,32 +221,31 @@ font-family: 'PT Serif', serif; -> para
 <body>
     <header>
         <nav class="navInfo">
-            <div class="navInfo-item-first navInfo-item">
-                <div><i class="fad fa-building"></i></div>
-                <div class="navInfo-detail">
-                    <p>Opening Time:</p>
-                    <p>Sat-Thur,10:00AM-6:00PM</p>
-                </div>
-            </div>
             <div class="navInfo-item">
                 <div><i class="fad fa-phone-volume"></i></div>
                 <div class="navInfo-detail">
-                    <p>Call Us:</p>
-                    <p>+919910608239</p>
+                    <p>+91 84-6786-8786</p>
                 </div>
             </div>
             <div class="navInfo-item">
                 <div><i class="fad fa-mail-bulk"></i></div>
                 <div class="navInfo-detail">
-                    <p>Email Us:</p>
-                    <p>asgar97.ali@gmail.com</p>
+                    <p>cadtechnologiescam@gmail.com</p>
                 </div>
+            </div>
+            <div class="social-sites">
+                <a href="https://m.facebook.com/1898573663605340/" class="social-icon"><img src="https://img.icons8.com/fluency/25/000000/facebook.png"/></a>
+                <a href="https://www.instagram.com/cadtechnologies/"class="social-icon" ><img src="https://img.icons8.com/color/25/000000/instagram-new--v2.png"/></a>
+                <a href="" class="social-icon"><img src="https://img.icons8.com/color/25/000000/twitter--v2.png"/></a>
+                <a href="" class="social-icon"><img src="https://img.icons8.com/color/25/000000/youtube-play.png"/></a>
+                <a href="https://www.linkedin.com/company/cad-technologie/?viewAsMember=true" class="social-icon"><img src="https://img.icons8.com/color/25/000000/linkedin.png"/></a>
+                <a href="https://www.google.com/localservices/profile?g2lbs=AGgkzMxQTjUTqR7H8KhsqKhXRmHnglmBqDXHORfORY8-p9k82J7T3_6cBr64xyrHgYNeATmbGCtF&hl=en-IN&gl=in&authuser=3&ssta=1&scp=ChtnY2lkOmVuZ2luZWVyaW5nX2NvbnN1bHRhbnQSggESEgmzIl338w8NORFY_DgoLAPwiCJWTmFuZ2xpIFZpaGFyIEV4dGVuc2lvbiBQYXJ0IDEsIEluZHJhIFBhcmssIEJsb2NrIEUsIE5hbmdsaSBTYWtyYXdhdGksIE5ldyBEZWxoaSwgRGVsaGkqFA0AGw8RFbZ05S0dyr0PESX7oOYtGhBjYWQgdGVjaG5vbG9naWVzIhBjYWQgdGVjaG5vbG9naWVzKhZFbmdpbmVlcmluZyBjb25zdWx0YW50&spp=Cg0vZy8xMXNwbjBwczM3&src=2&q=CAD+Technologies+New+Delhi,+Delhi&sa=X&ved=2ahUKEwj_pJeIlLf2AhXuwjgGHcQUA4kQkbkFegQIUhAb" class="social-icon"><img src="https://img.icons8.com/fluency/25/000000/google-plus-squared.png"/></a>
             </div>
         </nav>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark ps-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Interior And Architecture Design</a>
+            <a class="navbar-brand" href="/"><img class="logoImage" src="./images/cad2.png" alt="" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -130,10 +262,45 @@ font-family: 'PT Serif', serif; -> para
                   CAD Training
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/civilEngg">Civil Engineering</a></li>
-                            <li><a class="dropdown-item" href="/interiorDesign">Interior Design</a></li>
-                            <li><a class="dropdown-item active" href="/architecDesign">Architecture Design</a></li>
-                            <li><a class="dropdown-item" href="/structDesign">Structural Design</a></li>
+                            <li id="item1">
+                                <a class="dropdown-item" href="/civilEngg">Civil CAD Softwares</a>
+                                <ul id="detailed1">
+                                    <li>AUTOCAD 2D + 3D</li>
+                                    <li>STAAD Pro</li>
+                                    <li>Revit Structure</li>
+                                    <li>AutoCAD Civil 3D</li>
+                                    <li>Tekla Structural Designer</li>
+                                </ul>
+                            </li>
+                            <li id="item2">
+                                <a class="dropdown-item" href="/interiorDesign">Interior and Architecture</a>
+                                <ul id="detailed2">
+                                    <li>Lumion</li>
+                                    <li>Photoshop for Interior</li>
+                                    <li>SketchUp</li>
+                                    <li>Revit Architecture</li>
+                                    <li>3DS MAX (Advanced)</li>
+                                    <li>AutoCAD</li>
+                                </ul>
+                            </li>
+                            <li id="item3">
+                                <a class="dropdown-item" href="/architecDesign">Mechanical CAD Softwares</a>
+                                <ul id="detailed3">
+                                    <li>CATIA</li>
+                                    <li>NX Mold Design</li>
+                                    <li>NX CAD</li>
+                                    <li>AutoCAD</li>
+                                    <li>SolidWorks</li>
+                                    <li>ArtCAM</li>
+                                </ul>
+                            </li>
+                            <li id="item4">
+                                <a class="dropdown-item" href="/structDesign">Electrical CAD Softwares</a>
+                                <ul id="detailed4">
+                                    <li>Revit MEP</li>
+                                    <li>AutoCAD Electrical</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <!-- <li class="nav-item dropdown">
@@ -159,47 +326,102 @@ font-family: 'PT Serif', serif; -> para
         </div>
     </nav>
 
+<div class="query" id="query">
+    <div class="firstq">For Queries Contact</div>
+    <div class="secondq"><i class="fad fa-phone-volume"></i><a href="tel:+918467868786">+91 84-6786-8786</a></div>
+</div>
 
-
-
-    <div class="architec pt-5 pb-5">
-        <h1 class="text-center mb-5" style="color: black;font-size: 55px;font-weight: 900;">Architecture Design</h1>
-        <div class="architec-container container mb-5">
-            <div class="architec-row row">
-                <div class="company-img col-sm-5"><img class="col-sm-12" src="https://images.unsplash.com/photo-1611299011492-753124b2aca2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGFyY2hpdGVjdHVyZSUyMGRlc2lnbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="..."></div>
-                <div class="company-content col-sm-7 mt-5">
-                    <h1>AUTOCAD 2D + 3D</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis perferendis totam quia! Optio suscipit officiis ab illo obcaecati earum porro labore voluptate cumque quaerat possimus, doloribus maiores. Tenetur, architecto quisquam.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consequatur aliquam voluptatem ab, incidunt amet facere laboriosam impedit magni id maxime, cupiditate quas quod quasi dicta eos labore repellat sed! Nihil similique
-                        porro dicta iste nulla eaque soluta consequatur est, deserunt mollitia nesciunt debitis? Rem aliquam iure cumque eligendi labore.</p>
+    <div class="civil pt-5 pb-5">
+        <h1 class="page-header text-center mb-5" style="color: black;font-size: 55px;font-weight: 900;">Mechanical CAD Softwares</h1>
+        <div class="civil-container container mb-5">
+            <div class="civil-row row">
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/catia.png" alt="..."></div>
+                <div class="company-content col-sm-7">
+                    <h1>CATIA</h1>
+                    <p class="desc">CATIA is a multi-platform software suite for computer-aided design, computer-aided manufacturing, computer-aided engineering, 3D modeling and Product lifecycle management, developed by the French company Dassault Systèmes.
+CATIA (Computer-Aided Three dimensional Interactive Application) software is a complete multi-platform solution for computer-aided design, manufacturing, engineering, 3D and PLM.
+IF your academic institution is already a CATIA V5 customer, you can provide students with a free version of CATIA V5 for homework purposes (homework edition).</p>
+                    <span class="pricing">
+                        INR: <p class="real_price">&#8377;9999</p> <del><p class="cut_price">&#8377;11999</p></del>
+                    </span>
+                    <p class="pricing">Duration: <span style="color: green;">30 Days</span></p>
                 </div>
             </div>
         </div>
-        <div class="architec-container container mt-5">
-            <div class="architec-row architec-row-even row">
-                <div class="company-content col-sm-7 mt-5">
-                    <h1>GOOGLE SKETCHUP</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis perferendis totam quia! Optio suscipit officiis ab illo obcaecati earum porro labore voluptate cumque quaerat possimus, doloribus maiores. Tenetur, architecto quisquam.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consequatur aliquam voluptatem ab, incidunt amet facere laboriosam impedit magni id maxime, cupiditate quas quod quasi dicta eos labore repellat sed! Nihil similique
-                        porro dicta iste nulla eaque soluta consequatur est, deserunt mollitia nesciunt debitis? Rem aliquam iure cumque eligendi labore.</p>
-                </div>
-                <div class="company-img col-sm-5"><img class="col-sm-12" src="https://images.unsplash.com/photo-1617098474202-0d0d7f60c56b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGludGVyaW9yJTIwZGVzaWduZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="..."></div>
+        <div class="civil-container container mt-5">
+            <div class="civil-row civil-row-even row">
+                <div class="company-content col-sm-7">
+                    <h1>NX Mold Design</h1>
+                        <p class="desc">NX Mold Design automates and streamlines the entire mold development process including part design, tool design and motion validation.
+The NX Mold Wizard training course acquaints users with all the major tools and techniques for creating injection mold designs through NX. It helps users get started with NX Mold Wizard and bridges the classroom training to the real product design through a variety of activities.</p>
+                        <span class="pricing">
+                            INR: <p class="real_price">&#8377;11999</p> <del><p class="cut_price">&#8377;13999</p></del>
+                        </span>
+                        <p class="pricing">Duration: <span style="color: green;">45 Days</span></p>
+                    </div>
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/nx_mold.jpg" alt="..."></div>
             </div>
         </div>
-        <div class="architec-container container mt-5">
-            <div class="architec-row row">
-                <div class="company-img col-sm-5"><img class="col-sm-12" src="https://images.unsplash.com/photo-1617098591651-dd95032bc8bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGludGVyaW9yJTIwZGVzaWduZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="..."></div>
-                <div class="company-content col-sm-7 mt-5">
-                    <h1>REVIT Architecture</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis perferendis totam quia! Optio suscipit officiis ab illo obcaecati earum porro labore voluptate cumque quaerat possimus, doloribus maiores. Tenetur, architecto quisquam.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consequatur aliquam voluptatem ab, incidunt amet facere laboriosam impedit magni id maxime, cupiditate quas quod quasi dicta eos labore repellat sed! Nihil similique
-                        porro dicta iste nulla eaque soluta consequatur est, deserunt mollitia nesciunt debitis? Rem aliquam iure cumque eligendi labore.</p>
-                </div>
+        <div class="civil-container container mb-5">
+            <div class="civil-row row">
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/nx_cad.jpeg" alt="..."></div>
+                <div class="company-content col-sm-7">
+                    <h1>NX CAD (Siemens NX)</h1>
+                        <p class="desc">NX, formerly known as "unigraphics", is an advanced high-end CAD/CAM/CAE.
+Siemens NX software is a flexible and powerful integrated solution that helps you deliver better products faster and more efficiently. NX delivers the next generation of design, simulation, and manufacturing solutions that enable companies to realize the value of the digital twin.
+NX offers high-performance modeling, drafting and assembly design- powered by Synchronous Technology -that can't be beat. The product design tools, as well as potential data management capabilities, make this a complete solution, from design to production.</p>
+                        <span class="pricing">
+                            INR: <p class="real_price">&#8377;9999</p> <del><p class="cut_price">&#8377;11999</p></del>
+                        </span>
+                        <p class="pricing">Duration: <span style="color: green;">45 Days</span></p>
+                    </div>
+            </div>
+        </div>
+        <div class="civil-container container mt-5">
+            <div class="civil-row civil-row-even row">
+                <div class="company-content col-sm-7">
+                    <h1>AutoCAD (Mechanical Engineering)</h1>
+                        <p class="desc">AutoCAD is a commercial computer-aided design and drafting software application. Developed and marketed by Autodesk.
+AutoCAD is used in industry, by architects, project managers, engineers, graphic designers, city planners and other professionals.
+AutoCAD stands for Computer-Aided Design. This software used for designing and drafting. It allows a user to conceptualize ideas, product designs and drawings to the required level of technical accuracy, perform rapid design calculations and simulations in the field of manufacturing industries.</p>
+                        <span class="pricing">
+                            INR: <p class="real_price">&#8377;5999</p> <del><p class="cut_price">&#8377;6999</p></del>
+                        </span>
+                        <p class="pricing">Duration: <span style="color: green;">45 Days</span></p>
+                    </div>
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/autocad_mech.jpeg" alt="..."></div>
+            </div>
+        </div>
+        <div class="civil-container container mb-5">
+            <div class="civil-row row">
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/solidworks.png" alt="..."></div>
+                <div class="company-content col-sm-7">
+                    <h1>SolidWorks</h1>
+                        <p class="desc">SolidWorks is a solid modeling computer-aided design and computer-aided engineering computer program.
+SOLIDWORKS is used to develop mechatronics systems from beginning to end. At the initial stage, the software is used for planning, visual ideation, modeling, feasibility assessment, prototyping, and project management. The software is then used for design and building of mechanical, electrical, and software elements.</p>
+                        <span class="pricing">
+                            INR: <p class="real_price">&#8377;11999</p> <del><p class="cut_price">&#8377;14999</p></del>
+                        </span>
+                        <p class="pricing">Duration: <span style="color: green;">45 Days</span></p>
+                    </div>
+            </div>
+        </div>
+        <div class="civil-container container mt-5">
+            <div class="civil-row civil-row-even row">
+                <div class="company-content col-sm-7">
+                    <h1>ArtCAM</h1>
+                        <p class="desc">ArtCAM software is a single solution for designers, makers, and small businesses looking to create 3D reliefs and decorative woodwork. ArtCAM is a unique software program which enables you to create impressive, high-quality three-dimensional products starting out as two-dimensional bitmap or vector based artwork.
+ArtCAM is an artistic 3D CAD/CAM package with the functionality to do 2D design, editing and layout tools, vectorization of bitmaps, true shape nesting, 3D modeling tools, 3D model import, interactive sculpting, texturing tools and ability to re-use 3D models as clipart in any size in other designs.
+ArtCAM is used in a variety of sectors from jewelry and coin minting, to the design and manufacture of architectural cornicing and facades. The common theme across these sectors is the desire to produce intricate artistic forms with incredible detail that can then be quickly and easily machined or 3D printed.</p>
+                        <span class="pricing">
+                            INR: <p class="real_price">&#8377;14999</p> <del><p class="cut_price">&#8377;18999</p></del>
+                        </span>
+                        <p class="pricing">Duration: <span style="color: green;">30 Days</span></p>
+                    </div>
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/artcam.jpeg" alt="..."></div>
             </div>
         </div>
     </div>
-
-
 
 
 
@@ -245,10 +467,10 @@ font-family: 'PT Serif', serif; -> para
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                         <h6 class="text-uppercase footCom fw-bold mb-4">
-                            <i class="fad fa-layer-group"></i></i>Dignity
+                            <i class="fad fa-layer-group"></i></i>CAD Technologies
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            CAD Technologies is CAD CAM CAE Training Center is established in the year 2015.
                         </p>
                     </div>
 
@@ -258,16 +480,16 @@ font-family: 'PT Serif', serif; -> para
                             CAD Training
                         </h6>
                         <p>
-                            <a href="/civilEngg" class="text-reset">Civil Engineering</a>
+                            <a href="/civilEngg" class="text-reset">Civil CAD Softwares</a>
                         </p>
                         <p>
-                            <a href="/interiorDesign" class="text-reset">Interior Design</a>
+                            <a href="/interiorDesign" class="text-reset">Interior and Architecture</a>
                         </p>
                         <p>
-                            <a href="/architecDesign" class="text-reset">Architecture Design</a>
+                            <a href="/architecDesign" class="text-reset">Mechanical CAD Softwares</a>
                         </p>
                         <p>
-                            <a href="/structDesign" class="text-reset">Structural Design</a>
+                            <a href="/structDesign" class="text-reset">Electrical CAD Softwares</a>
                         </p>
                     </div>
 
@@ -297,9 +519,9 @@ font-family: 'PT Serif', serif; -> para
                         </h6>
                         <p><i class="fas fa-home me-3"></i> Dwarka Mor, New Delhi 110084, INDIA</p>
                         <p>
-                            <i class="fas fa-envelope me-3"></i> asgar97.ali@gmail.com
+                            <i class="fas fa-envelope me-3"></i>cadtechnologiescam@gmail.com
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> +919910608239</p>
+                        <p><i class="fas fa-phone me-3"></i>+91 84-6786-8786</p>
                     </div>
 
                 </div>
@@ -308,16 +530,32 @@ font-family: 'PT Serif', serif; -> para
         </section>
         <div class="text-center p-4" style="background-color: rgb(29 81 96);color: #fff;">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="/">Dignity Interior And Architecture Design</a>
+            <span style="border-bottom: 1px solid #fff;">CAD Technologies</span>
         </div>
     </footer>
+<script>
+    window.onscroll = function() {myFunction()};
 
+// Get the header
+var header = document.getElementById("quer");
 
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+console.log(header.offsetTop);
 
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    {{!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script> --}}
 
 
 </body>

@@ -18,7 +18,7 @@ font-family: 'PT Serif', serif; -> para
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lobster&family=PT+Serif&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW50ZXJpb3IlMjBkZXNpZ25lcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/cad2.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         * {
@@ -27,8 +27,91 @@ font-family: 'PT Serif', serif; -> para
             box-sizing: border-box;
             font-family: 'PT Serif', serif;
         }
+
+        .logoImage{
+            width: 110px;
+        }
+        .dropdown-menu{
+            background-color: #318494;
+            border: none;
+        }
+        .dropdown-menu a{
+            color: #fff;
+        }
+        .dropdown-menu a:hover{
+            background: none;
+            color: #e0ba68;
+            border-bottom: 2px solid #e0ba68;
+        }
+        #item1,#item2,#item3,#item4{
+            position: relative;
+        }
+        #detailed1{
+            display: none;
+            list-style: none;
+        }
+        #detailed1 li{
+            line-height: 25px;
+        }
+        #item1:hover #detailed1{
+            display: block;
+            position: absolute;
+            right: -80%;
+            top: -5%;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed2{
+            display: none;
+            list-style: none;
+        }
+        #detailed2 li{
+            line-height: 25px;
+        }
+        #item2:hover #detailed2{
+            display: block;
+            position: absolute;
+            right: -70%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed3{
+            display: none;
+            list-style: none;
+        }
+        #detailed3 li{
+            line-height: 25px;
+        }
+        #item3:hover #detailed3{
+            display: block;
+            position: absolute;
+            right: -60%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
+        #detailed4{
+            display: none;
+            list-style: none;
+        }
+        #detailed4 li{
+            line-height: 25px;
+        }
+        #item4:hover #detailed4{
+            display: block;
+            position: absolute;
+            right: -60%;
+            top: 0;
+            background: #318494;
+            padding: 10px;
+            color: #fff;
+        }
         
-        .about h5 {
+        .about h3 {
             color: #664d03;
             font-weight: bolder;
         }
@@ -41,9 +124,42 @@ font-family: 'PT Serif', serif; -> para
         .about p {
             color: #374e4e;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
             font-family: 'Inter', sans-serif;
         }
+
+        .team {
+            text-align: center;
+        }
+
+        .team-h5 {
+            font-weight: 900;
+            font-size: 25px;
+            color: #664d17;
+        }
+
+        .team-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+        }
+
+        .team-member {
+            position: relative;
+        }
+
+        .team-member img {
+            width: 100%;
+        }
+
+        .team-detail {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #664d03;
+            color: #fff;
+        }
+
         
         @media (max-width: 1000px) {
             .about-container {
@@ -55,6 +171,9 @@ font-family: 'PT Serif', serif; -> para
             }
             .company-content p {
                 font-size: 15px;
+            }
+            .team-inner {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -77,6 +196,11 @@ font-family: 'PT Serif', serif; -> para
                 margin-left: 10px;
             }
         }
+        @media (max-width: 550px) {
+            .team-inner {
+                grid-template-columns: none;
+            }
+        }
         
         @media (max-width: 400px) {
             .page-header {
@@ -90,32 +214,31 @@ font-family: 'PT Serif', serif; -> para
 <body>
     <header>
         <nav class="navInfo">
-            <div class="navInfo-item-first navInfo-item">
-                <div><i class="fad fa-building"></i></div>
-                <div class="navInfo-detail">
-                    <p>Opening Time:</p>
-                    <p>Sat-Thur,10:00AM-6:00PM</p>
-                </div>
-            </div>
             <div class="navInfo-item">
                 <div><i class="fad fa-phone-volume"></i></div>
                 <div class="navInfo-detail">
-                    <p>Call Us:</p>
-                    <p>+919910608239</p>
+                    <p>+91 84-6786-8786</p>
                 </div>
             </div>
             <div class="navInfo-item">
                 <div><i class="fad fa-mail-bulk"></i></div>
                 <div class="navInfo-detail">
-                    <p>Email Us:</p>
-                    <p>asgar97.ali@gmail.com</p>
+                    <p>cadtechnologiescam@gmail.com</p>
                 </div>
+            </div>
+            <div class="social-sites">
+                <a href="https://m.facebook.com/1898573663605340/" class="social-icon"><img src="https://img.icons8.com/fluency/25/000000/facebook.png"/></a>
+                <a href="https://www.instagram.com/cadtechnologies/"class="social-icon" ><img src="https://img.icons8.com/color/25/000000/instagram-new--v2.png"/></a>
+                <a href="" class="social-icon"><img src="https://img.icons8.com/color/25/000000/twitter--v2.png"/></a>
+                <a href="" class="social-icon"><img src="https://img.icons8.com/color/25/000000/youtube-play.png"/></a>
+                <a href="https://www.linkedin.com/company/cad-technologie/?viewAsMember=true" class="social-icon"><img src="https://img.icons8.com/color/25/000000/linkedin.png"/></a>
+                <a href="https://www.google.com/localservices/profile?g2lbs=AGgkzMxQTjUTqR7H8KhsqKhXRmHnglmBqDXHORfORY8-p9k82J7T3_6cBr64xyrHgYNeATmbGCtF&hl=en-IN&gl=in&authuser=3&ssta=1&scp=ChtnY2lkOmVuZ2luZWVyaW5nX2NvbnN1bHRhbnQSggESEgmzIl338w8NORFY_DgoLAPwiCJWTmFuZ2xpIFZpaGFyIEV4dGVuc2lvbiBQYXJ0IDEsIEluZHJhIFBhcmssIEJsb2NrIEUsIE5hbmdsaSBTYWtyYXdhdGksIE5ldyBEZWxoaSwgRGVsaGkqFA0AGw8RFbZ05S0dyr0PESX7oOYtGhBjYWQgdGVjaG5vbG9naWVzIhBjYWQgdGVjaG5vbG9naWVzKhZFbmdpbmVlcmluZyBjb25zdWx0YW50&spp=Cg0vZy8xMXNwbjBwczM3&src=2&q=CAD+Technologies+New+Delhi,+Delhi&sa=X&ved=2ahUKEwj_pJeIlLf2AhXuwjgGHcQUA4kQkbkFegQIUhAb" class="social-icon"><img src="https://img.icons8.com/fluency/25/000000/google-plus-squared.png"/></a>
             </div>
         </nav>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark ps-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Interior And Architecture Design</a>
+            <a class="navbar-brand" href="/"><img class="logoImage" src="./images/cad2.png" alt="" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -132,10 +255,45 @@ font-family: 'PT Serif', serif; -> para
                   CAD Training
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/civilEngg">Civil Engineering</a></li>
-                            <li><a class="dropdown-item" href="/interiorDesign">Interior Design</a></li>
-                            <li><a class="dropdown-item" href="/architecDesign">Architecture Design</a></li>
-                            <li><a class="dropdown-item" href="/structDesign">Structural Design</a></li>
+                            <li id="item1">
+                                <a class="dropdown-item" href="/civilEngg">Civil CAD Softwares</a>
+                                <ul id="detailed1">
+                                    <li>AUTOCAD 2D + 3D</li>
+                                    <li>STAAD Pro</li>
+                                    <li>Revit Structure</li>
+                                    <li>AutoCAD Civil 3D</li>
+                                    <li>Tekla Structural Designer</li>
+                                </ul>
+                            </li>
+                            <li id="item2">
+                                <a class="dropdown-item" href="/interiorDesign">Interior and Architecture</a>
+                                <ul id="detailed2">
+                                    <li>Lumion</li>
+                                    <li>Photoshop for Interior</li>
+                                    <li>SketchUp</li>
+                                    <li>Revit Architecture</li>
+                                    <li>3DS MAX (Advanced)</li>
+                                    <li>AutoCAD</li>
+                                </ul>
+                            </li>
+                            <li id="item3">
+                                <a class="dropdown-item" href="/architecDesign">Mechanical CAD Softwares</a>
+                                <ul id="detailed3">
+                                    <li>CATIA</li>
+                                    <li>NX Mold Design</li>
+                                    <li>NX CAD</li>
+                                    <li>AutoCAD</li>
+                                    <li>SolidWorks</li>
+                                    <li>ArtCAM</li>
+                                </ul>
+                            </li>
+                            <li id="item4">
+                                <a class="dropdown-item" href="/structDesign">Electrical CAD Softwares</a>
+                                <ul id="detailed4">
+                                    <li>Revit MEP</li>
+                                    <li>AutoCAD Electrical</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <!-- <li class="nav-item dropdown">
@@ -160,23 +318,64 @@ font-family: 'PT Serif', serif; -> para
             </div>
         </div>
     </nav>
-
     <div class="about pt-5 pb-5">
         <h1 class="text-center mb-5" style="color: black;font-size: 55px;font-weight: 900;">About Us</h1>
         <div class="about-container container">
             <div class="about-row row">
-                <div class="company-img col-sm-5"><img class="col-sm-12" src="https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fGludGVyaW9yJTIwZGVzaWduZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="..."></div>
-                <div class="company-content col-sm-7 mt-5">
-                    <h5>Welcome to Dignity Interior and Architecture Design</h5>
-                    <h1>About Company</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis perferendis totam quia! Optio suscipit officiis ab illo obcaecati earum porro labore voluptate cumque quaerat possimus, doloribus maiores. Tenetur, architecto quisquam.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consequatur aliquam voluptatem ab, incidunt amet facere laboriosam impedit magni id maxime, cupiditate quas quod quasi dicta eos labore repellat sed! Nihil similique
-                        porro dicta iste nulla eaque soluta consequatur est, deserunt mollitia nesciunt debitis? Rem aliquam iure cumque eligendi labore.</p>
+                <div class="company-img col-sm-5"><img class="col-sm-12" src="./images/about.avif" alt="..."></div>
+                <div class="company-content col-sm-7">
+                    <h3>Welcome to CAD Technologies</h3>
+                    <p>CAD Technologies is CAD CAM CAE Training Center is established in the year 2016 with the association of experienced professionals. The objective of this association is not only just to teach softwares to students/working professionals but also prepare them technically strong in various domains & assist them to grab best jobs in various industries.
+CAD Technologies is leading training organization in the field of CAD/CAM/CAE
+which caters Mechanical, Civil, Interior, Architecture, Electrical & Electronics Engineering design training. Our courses are truly industries specific which meets the present demand of design engineering. After completion of courses our team of experts provides various tips which help candidates to crack interview rounds - Aptitude, Technical & HR etc..
+CAD Technologies is having collaboration with many companies in New Delhi, Delhi to fulfil their employee demand. This makes sure that our candidates do not have to look for job outside. They just have to learn and get placed after training completion.
+CAD Technologies has well equipped facilities, competent faculties & ISO 9001:2015 Certified quality management systems for conducting these educational programs.</p>
+                    <p>We are CAD TECHNOLOGIES, We are multiple work in Engineering field and training provide CAD Software like that AutoCad, Revit Architecture, Stadd Pro, 3DS Max, V-Ray, Revit Structure, Photoshop, Lumion, Google SketchUp, Solid Work, ArtCam, Catia, NX, Tekla Structure, Revit MEP etc.
+We provide Designing part of multiple Trade
+like Civil, Mechanical, Electrical, Automobile, Tool and Die, Aerospace, Interiors, Architectural etc. We provide House planning with vastu shastra, Interior Designing, Electrical Planning, MEP Designing, mechanical Parts Designing, mold Designing and various types of mechanical parts, CNC Designing.
+We provide Industrial Training, Site Visiting, Industrial Tour, Finding Estimation and Quantity, HDR Quality of rendering.</p>
                 </div>
             </div>
         </div>
     </div>
-
+<div class="team mb-5">
+        <h5 class="team-h5">Our Team</h5>
+        <h1>Meet With Our Team</h1>
+        <div class="team-inner container mt-3">
+            <div class="team-member">
+                <img src="./images/asgar.jpeg" alt="...">
+                <div class="team-detail">
+                    <h5>Asgar Ali</h5>
+                    <p>Project Engineer, Civil Department</p>
+                    <p>(Experience: 6 years)</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/hanshraj.jpeg" alt="...">
+                <div class="team-detail">
+                    <h5>Hansraj</h5>
+                    <p>Project Engineer, Mechanical Department</p>
+                    <p>(Experience: 4 years)</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/jaishree.jpeg" alt="...">
+                <div class="team-detail">
+                    <h5>Jaishree</h5>
+                    <p>Architect and Interior Designer</p>
+                    <p>(Experience: 6 years)</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/abhay.jpeg" alt="...">
+                <div class="team-detail">
+                    <h5>Abhay Dipu Jha</h5>
+                    <p>Marketing Expert, Councillor</p>
+                    <p>(Experience: 6 years)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="text-center text-lg-start">
 
@@ -217,10 +416,10 @@ font-family: 'PT Serif', serif; -> para
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                         <h6 class="text-uppercase footCom fw-bold mb-4">
-                            <i class="fad fa-layer-group"></i></i>Dignity
+                            <i class="fad fa-layer-group"></i></i>CAD Technologies
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            CAD Technologies is CAD CAM CAE Training Center is established in the year 2015.
                         </p>
                     </div>
 
@@ -230,16 +429,16 @@ font-family: 'PT Serif', serif; -> para
                             CAD Training
                         </h6>
                         <p>
-                            <a href="/civilEngg" class="text-reset">Civil Engineering</a>
+                            <a href="/civilEngg" class="text-reset">Civil CAD Softwares</a>
                         </p>
                         <p>
-                            <a href="/interiorDesign" class="text-reset">Interior Design</a>
+                            <a href="/interiorDesign" class="text-reset">Interior and Architecture</a>
                         </p>
                         <p>
-                            <a href="/architecDesign" class="text-reset">Architecture Design</a>
+                            <a href="/architecDesign" class="text-reset">Mechanical CAD Softwares</a>
                         </p>
                         <p>
-                            <a href="/structDesign" class="text-reset">Structural Design</a>
+                            <a href="/structDesign" class="text-reset">Electrical CAD Softwares</a>
                         </p>
                     </div>
 
@@ -269,9 +468,9 @@ font-family: 'PT Serif', serif; -> para
                         </h6>
                         <p><i class="fas fa-home me-3"></i> Dwarka Mor, New Delhi 110084, INDIA</p>
                         <p>
-                            <i class="fas fa-envelope me-3"></i> asgar97.ali@gmail.com
+                            <i class="fas fa-envelope me-3"></i>cadtechnologiescam@gmail.com
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> +919910608239</p>
+                        <p><i class="fas fa-phone me-3"></i>+91 84-6786-8786</p>
                     </div>
 
                 </div>
@@ -280,7 +479,7 @@ font-family: 'PT Serif', serif; -> para
         </section>
         <div class="text-center p-4" style="background-color: rgb(29 81 96);color: #fff;">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="/">Dignity Interior And Architecture Design</a>
+            <span style="border-bottom: 1px solid #fff;">CAD Technologies</span>
         </div>
     </footer>
 
@@ -289,7 +488,7 @@ font-family: 'PT Serif', serif; -> para
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    {{!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script> --}}
 
 
 </body>

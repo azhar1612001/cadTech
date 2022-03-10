@@ -1,10 +1,12 @@
 body {
     background: #e9eff1;
 }
-
+.social-icon:hover{
+    opacity: 0.7;
+}
 .navInfo {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     padding: 10px;
     background: #055160;
@@ -61,13 +63,19 @@ footer {
 }
 
 .footCom {
-    color: #842029;
+    color: #055160;
     font-weight: bolder !important;
     font-size: 30px;
 }
 
 footer a:hover {
-    color: #842029 !important;
+    color: #055160 !important;
+}
+
+@media (max-width: 710px) {
+    .navInfo{
+        display: block;
+    }
 }
 
 @media (max-width: 700px) {
