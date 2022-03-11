@@ -72,8 +72,8 @@ app.post('/carrers', (req, res) => {
 
             var mailOptions = {
                 from: process.env.GMAILID,
-                to: `${process.env.GMAILID}, ${email}`,
-                subject: "Visited to Dignity Carrer",
+                to: `${process.env.COMPANYGMAIL}, ${email}`,
+                subject: "Visited to CAD Technologies Carrer",
                 text: `
                 name:${name}
                 email:${email}
@@ -169,7 +169,7 @@ app.post("/contact", async(req, res) => {
 
             let info = await transporter.sendMail({
                 from: process.env.GMAILID,
-                to: `${email} , ${process.env.GMAILID}`,
+                to: `${email} , ${process.env.COMPANYGMAIL}`,
                 subject: subject,
                 text: `
                 Regarding: ${subject}
